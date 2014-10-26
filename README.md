@@ -30,7 +30,7 @@ If you are on a Mac or on Linux you should be able to just run the script in the
 The script
 ----------
 1. The script starts checking and loading necesary packages.
-2. It checks if the original data set is in the working directory, if not it either automatically downloads it, or if on a Windows system, stops the script an tells the user to download it manually.
+2. It checks if the original dataset is in the working directory, if not it either automatically downloads it, or if on a Windows system, stops the script an tells the user to download it manually.
 3. Next the script automatically loads and merges the source data files into one data set in R. It starts by loading the training set and merging separate files and then doing the same with the test set and finally rbinding them into one big file. Originally the file loading scrpit was recursive, but that was turned off as the data in subdirectories was not used.
 4. The column names are fixed and the dataframe is converted into a tbl_df for easier manipulation.
 5. Next the script reads the variable names from the features.txt-file. It adds temporary incremental suffixes to the variablenames as othewise we will get conflicting dublicate variablenames. These names are pushed into the dataframe as variablenames.
