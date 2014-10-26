@@ -20,7 +20,7 @@ Content
 
 Set-up
 ------
-If you are on a Mac or on Linux you should be able to just run the script in the folder of your choice and the script will download the data set. If you are on a Windows machine you will need to download the data set manually.
+If you are on a Mac or on Linux you should be able to just run the script in the folder of your choice and the script will download the data set. If you are on a Windows machine you will need to download the dataset manually.
 
 1. Download the zip archive from here: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 2. Extract the contents.
