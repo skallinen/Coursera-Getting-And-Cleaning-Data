@@ -14,9 +14,9 @@ The data set comes from a study about Human Activity Recognition Using Smartphon
 
 Content
 -------
-- This README.md document 
-- run_analysis.R script that tidies the data.
-- CODEBOOK.md
+- This **README.md** document 
+- **run_analysis.R** script that tidies the data.
+- **CODEBOOK.md**
 
 Set-up
 ------
@@ -25,5 +25,6 @@ If you are on a Mac or on Linux you should be able to just run the script in the
 1. Download the zip archive from here: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 2. Extract the contents.
 3. See to it that resulting folder is called "UCI HAR Dataset" and exists in the same directory as the script.
+4. Run the **run_analysis.R** script
 
 The script processes the data and writes the result into "tidy_data.txt"-file in your working document.
