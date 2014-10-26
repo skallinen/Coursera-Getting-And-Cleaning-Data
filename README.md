@@ -27,4 +27,15 @@ If you are on a Mac or on Linux you should be able to just run the script in the
 3. See to it that resulting folder is called "UCI HAR Dataset" and exists in the same directory as the script.
 4. Run the **run_analysis.R** script
 
-The script processes the data and writes the result into "tidy_data.txt"-file in your working document.
+The script
+----------
+1. The script starts checking and loading necesary packages.
+2. It checks if the original data set is in the working directory, if not it either automatically downloads it, or if on a Windows system, stops the script an tells the user to download it manually.
+3. Next the script automatically loads and merges the source data files into one data set in R. It starts by loading the training set and merging separate files and then doing the same with the test set and finally rbinding them into one big file. Originally the file loading scrpit was recursive, but that was turned off as the data in subdirectories was not used.
+4. The column names are fixed and the dataframe is converted into a tbl_df for easier manipulation.
+5. Next the script reads the variable names from the features.txt-file. It adds temporary incremental suffixes to the variablenames as othewise we will get conflicting dublicate variablenames. These names are pushed into the dataframe as variablenames.
+6. It then selects only the relevant columns. It recognizes the right variable names by patternmaching 'mean()' and 'std()' from the variablenames. These variables contain the mean and standard deviation calculations for each measurement.
+7. Now it adds the activity labels to the activity column. The script does this by using the factor function and creating factor labels for each activity.
+8. It prettyfies the variablenames and remove all the temporary characters from them.
+9. In the following step the script calculates the averages for set with the average of each variable for each activity and each subject. This is achieved by melting with subject and activity being id's and rest as measurements. The data is then cast with the mean values calculated. 
+10. Finally the result is saved to disk in the working directory as tidy_data.txt file.
