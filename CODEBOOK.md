@@ -1,12 +1,12 @@
-Variables
-=========
+Variables and transformations
+=============================
 
 The data in "tidy_data.txt" -document consists of three types of variables.
 
 1. "subject" - the test subject id referring to the experiment participant
 2. "activity"  - indicating the type of activity the test subject was engaging in when the measurements were recorded.
         - The experiment consisted of these six activities WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
-3. Number of variables based on the sensordata recorded from the mobile device. The variables are detailed below. Note that in the tidy_data.txt all the variables have been averaged according to test subjects and activity types.
+3. Number of variables based on the sensordata recorded from the mobile device. The variables are detailed below. Note that in the tidy_data.txt an additional **transformation** on all the variables have been done, where all selected sensor data has been averaged according to test subjects and activity types.
  
 The features selected for the original dataset come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 
